@@ -19,8 +19,9 @@ python sync.py "Z:\Movies" en ar
 
 
 ### Packeges:
+```
 pip install pymediainfo
-
+```
 <br />
 
 --- 
