@@ -51,9 +51,9 @@ if __name__ == "__main__":
                         cmd = ["subsync-cmd.exe",
                                 "sync",
                                 "--sub-lang",
-                                sub_lang,       # change this to your subtitle language
+                                sub_lang,       
                                 "--ref-lang",
-                                audio_lang,        # change this to your movie audio language
+                                audio_lang,        
                                 "--sub",
                                 os.path.join(subdir,tmp),
                                 "--ref" ,
