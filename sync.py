@@ -31,7 +31,7 @@ def GetSubFileName(dir, filename):
 
 if __name__ == "__main__":
         if len(sys.argv) != 4:
-            print("[-] Usage: sync.py <PATH> <audio_lang> <subtitles_lang>")
+            print("[-] Usage: sync.py <PATH> <subtitles_lang> <audio_lang> ")
             exit()
         rootdir = sys.argv[1]
         sub_lang = str(sys.argv[2])
