@@ -20,11 +20,13 @@ def SubExist(file):
         return True
     return False
 
-def GetSubFileName(dir, filename):
+def GetSubFileName(dir, filename, sub_lang):
     for file in dir:
         if isVideo(file):
             continue
-        if filename in file and file.endswith("srt"):
+        if filename in file and file.endswith(sub_lang + ".srt"):
+            return file
+        if filename in file and file.endswith(sub_lang + ".hi.srt"):
             return file
     return filename
     
@@ -42,7 +44,7 @@ if __name__ == "__main__":
                 if not file.endswith("srt") and isVideo(os.path.join(subdir,file)):
                     tFileName = os.path.splitext(file)
                     tmp = tFileName[0]
-                    relatedSub = GetSubFileName(files, tmp)
+                    relatedSub = GetSubFileName(files, tmp, sub_lang)
                     if relatedSub == tmp:
                         print(f"[-] No sub Found. [{tmp}]")
                     tmp += "." + sub_lang + ".srt"
